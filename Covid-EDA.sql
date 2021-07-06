@@ -44,7 +44,7 @@ ORDER BY TotalDeath DESC
 -- Global Death Count
 SET ARITHABORT OFF
 SET ANSI_WARNINGS OFF
-SELECT SUM(new_cases) NewCases, SUM(CAST(new_deaths AS INT)) NewDeaths, SUM(CAST(new_deaths AS INT))/SUM(new_cases)*100 AS DeathPercetage
+SELECT SUM(new_cases) TotalCases, SUM(CAST(new_deaths AS INT)) TotalDeaths, SUM(CAST(new_deaths AS INT))/SUM(new_cases)*100 AS DeathPercetage
 FROM Project..CovidDeaths
 ORDER BY 1,2
 
